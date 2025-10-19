@@ -1,4 +1,7 @@
 # AI Ethics Checklist Validation Study
+**Authors:** Mursalimov, A., Sagi, E., Berkenova R.  
+**Institution:** Astana IT University
+
 This repository contains code for evaluating the effectiveness of AI ethics checklists in reducing bias in language model responses.
 
 ## Overview
