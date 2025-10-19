@@ -36,13 +36,7 @@ ollama pull deepseek-r1:1.5b
 ### Run the main study
 
 ```bash
-python checklist_v2.py
-```
-
-### Run the basic version
-
-```bash
-python checklist.py
+python checklist_v4.py
 ```
 
 ## Output
