@@ -196,13 +196,13 @@ def main():
     print("="*60)
     print(f"\nChecklist Items ({len(checklist)}):")
     for key, item in checklist.items():
-        print(f"  • {key}: {item['question']}")
+        print(f"  - {key}: {item['question']}")
     print(f"\nTest Scenarios: {len(scenarios)}")
     print(f"Models: {len(models)}")
     print(f"Total Tests: {len(models) * len(scenarios) * 2} (baseline + checklist)\n")
     
     if not ollama_available:
-        print("⚠️  Running in simulation mode (Ollama not available)\n")
+        print("Running in simulation mode (Ollama not available)\n")
         return
     
     # Run experiments
@@ -274,15 +274,15 @@ def main():
         hypothesis_confirmed = (reduction_pct >= 20) and (p_value < 0.05)
         
         if hypothesis_confirmed:
-            print("✓ HYPOTHESIS CONFIRMED")
-            print(f"  • Bias reduction: {reduction_pct:.1f}% (≥20% threshold met)")
-            print(f"  • Statistical significance: p={p_value:.4f} (p<0.05)")
+            print("HYPOTHESIS CONFIRMED")
+            print(f"  - Bias reduction: {reduction_pct:.1f}% (≥20% threshold met)")
+            print(f"  - Statistical significance: p={p_value:.4f} (p<0.05)")
         else:
-            print("✗ HYPOTHESIS NOT CONFIRMED")
+            print("HYPOTHESIS NOT CONFIRMED")
             if reduction_pct < 20:
-                print(f"  • Bias reduction: {reduction_pct:.1f}% (below 20% threshold)")
+                print(f"  - Bias reduction: {reduction_pct:.1f}% (below 20% threshold)")
             if p_value >= 0.05:
-                print(f"  • Not statistically significant: p={p_value:.4f} (p≥0.05)")
+                print(f"  - Not statistically significant: p={p_value:.4f} (p≥0.05)")
     
     # Per-model breakdown
     print("\n" + "-"*60)

@@ -66,7 +66,7 @@ The study uses:
 ## Limitations
 
 - Simplified bias metrics based on keyword detection
-- Small sample size (3 models × 5 scenarios)
+- Small sample size (3 models x 5 scenarios)
 - Requires manual expert review for comprehensive validation
 
 ## Next Steps
